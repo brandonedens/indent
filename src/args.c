@@ -187,6 +187,7 @@ static int exp_sc   = 0;
 static int exp_sob  = 0;
 static int exp_ss   = 0;
 static int exp_st   = 0;
+static int exp_tisa = 0;
 static int exp_ts   = 0;
 static int exp_ut   = 0;
 static int exp_v    = 0;
@@ -248,6 +249,7 @@ const pro_ty pro[] =
     {"version", PRO_PRSTRING,                           0, ONOFF_NA, (int *) VERSION,                            &exp_version},
     {"v",       PRO_BOOL,                           false,       ON, &settings.verbose,                          &exp_v},
     {"ut",      PRO_BOOL,                            true,       ON, &settings.use_tabs,                         &exp_ut},
+    {"tisa",    PRO_BOOL,                            true,       ON, &settings.tabs_indent_spaces_align,         &exp_tisa},
     {"ts",      PRO_INT,                                8, ONOFF_NA, &settings.tabsize,                          &exp_ts},
     {"st",      PRO_BOOL,                           false,       ON, &settings.use_stdout,                       &exp_st},
     {"ss",      PRO_BOOL,                           false,       ON, &settings.space_sp_semicolon,               &exp_ss},
@@ -365,6 +367,7 @@ const pro_ty pro[] =
     {"version", PRO_PRSTRING,                           0, ONOFF_NA, (int *) VERSION,                            &exp_version},
     {"v",       PRO_BOOL,                           false,       ON, &settings.verbose,                          &exp_v},
     {"ut",      PRO_BOOL,                            true,       ON, &settings.use_tabs,                         &exp_ut},
+    {"tisa",    PRO_BOOL,                            true,       ON, &settings.tabs_indent_spaces_align,         &exp_tisa},
     {"ts",      PRO_INT,                                8, ONOFF_NA, &settings.tabsize,                          &exp_ts},
     {"st",      PRO_BOOL,                           false,       ON, &settings.use_stdout,                       &exp_st},
     {"ss",      PRO_BOOL,                           false,       ON, &settings.space_sp_semicolon,               &exp_ss},
@@ -487,6 +490,7 @@ const long_option_conversion_ty option_conversions[] =
     {"verbose",                                     "v"},
     {"usage",                                       "h"},
     {"use-tabs",                                    "ut"},
+    {"tabs-indent-spaces-align",                    "tisa"},
     {"tab-size",                                    "ts"},
     {"swallow-optional-blank-lines",                "sob"},
     {"struct-brace-indentation",                    "sbi"},

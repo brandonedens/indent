@@ -248,6 +248,7 @@ typedef struct user_options_st
     int verbose;     /*!<  when true, non-essential error messages are printed */
     int use_tabs;    /*!<  does indent convert tabs to spaces or not */
     int tabsize;     /*!<  The number of columns a tab character generates. */
+    int tabs_indent_spaces_align; /*!< We use tabs only for indention, spaces for alignment. */
     int use_stdout;  /*!<  Where does output go. */
     int space_sp_semicolon; /*!<  If true, a space is inserted between if, while, or for, and a semicolon
                              * for example while (*p++ == ' ') ; */

@@ -595,7 +595,9 @@ static int pad_output(
 {
     if (currentColumn < target_column)
     {
-        if (settings.use_tabs && (settings.tabsize > 1))
+        if (settings.use_tabs &&
+            (settings.tabs_indent_spaces_align && (currentColumn == 1)) &&
+            (settings.tabsize > 1))
         {
             int offset = settings.tabsize - (currentColumn - 1) % settings.tabsize;
 
